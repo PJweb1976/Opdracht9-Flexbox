@@ -1,0 +1,15 @@
+
+
+.blogpost-container {
+    display:flex;
+    width: 100%;
+    justify-content:flex-end;
+}
+
+.blogpost {
+    width: 300px;
+    border: 1em solid black;
+    font-size: 1em; 
+    text-align:center;
+    padding:1em;   
+}
