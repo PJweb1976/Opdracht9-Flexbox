@@ -1,158 +1,155 @@
 *,
 :after,
 :before {
-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 :root {
-    font-size: calc(1em + .16vw);
-    line-height: 1.5;
-    scroll-behavior: smooth;
+  font-size: calc(1em + 0.16vw);
+  line-height: 1.5;
+  scroll-behavior: smooth;
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
-    :root {
-        scroll-behavior: auto;
-    }
+  :root {
+    scroll-behavior: auto;
+  }
 
-    body *,
-    body *::after,
-    body *::before {
-      animation: none !important;
-      transition: none !important;
-      transition-duration: none !important;
-    }
+  body *,
+  body *::after,
+  body *::before {
+    animation: none !important;
+    transition: none !important;
+    transition-duration: none !important;
+  }
 }
-
 
 header {
-font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
-font-size: 1.25rem;
-color:darkslateblue;
-font-style:oblique;
-/*text-align:center;*/
-font-weight:bold; 
+  font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
+  font-size: 1.25rem;
+  color: darkslateblue;
+  font-style: oblique;
+  /*text-align:center;*/
+  font-weight: bold;
 }
 
-
-.box-1{
-    border: 3px dotted #000;
-    padding: 20px;
-    background-color:white;
+.box-1 {
+  border: 2px dotted #000;
+  padding: 1em;
+  background-color: white;
 }
-.box-2{
-    border: 2px solid #000;
-    border-radius: 20px;
-    text-align:center;
-    padding: 20px
+.box-2 {
+  border: 2px solid #000;
+  border-radius: 1em;
+  text-align: center;
+  padding: 0.5em;
 }
-.block{
-    float: left;
-    width: 33.3%;
-    box-sizing:border-box;
-    display:inline;
-    margin: 20px;
+.block {
+  float: left;
+  width: 33.3%;
+  box-sizing: border-box;
+  display: inline;
+  margin: 2em;
 }
-
 
 /** 
     * Navigation
     **/
 
 nav ul {
-    display: flex;
-    list-style: none;
-    padding-left:0;
-    margin:0;
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
 }
 
-li  {   list-style:square;
-    padding-top:  5px;
-    padding-bottom: 5px;
-    padding-left: 10px;
-    padding-right: 5px;
-    display:inline;
-} 
-
-ul li a{
-    display: block;
+li {
+  list-style: square;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  display: inline;
 }
 
+ul li a {
+  display: block;
+}
 
 body {
-color: #24aaed;
-background-color: #e1e8e6;
-margin: 10px 40px 10px 40px;
-}   
+  color: #24aaed;
+  background-color: #e1e8e6;
+  margin: 1em 4em 1em 4em;
+}
 
 main {
-    font-size: 20px;
-    font-family: verdana;  
-    margin: 5px 10px 5px 10px;   
+  font-size: 20px;
+  font-family: verdana;
+  margin: 5px 10px 5px 10px;
 }
 
-h1, 
-.border{
-border: 5px solid darkgray;
+h1,
+.border {
+  border: 5px solid darkgray;
 }
 
-p,  
-.border{
-border: 3px solid darkgray;
-font-size: 20px;
-
+p,
+.border {
+  border: 3px solid darkgray;
+  font-size: 1em;
 }
-nav, #background {
-color:#0a0a0a;
-background-color: #bec4c3;
-font-weight: bold;
-font-size: 20px;
-font-style:oblique;
-margin: 5px 10px 5px 10px;
+nav,
+#background {
+  color: #0a0a0a;
+  background-color: #bec4c3;
+  font-weight: bold;
+  font-size: 1em;
+  font-style: oblique;
+  margin: 1em 1em 0.5em 1em;
 }
-aside{ 
-width: 250px;
-margin:0 auto;
+aside {
+  width: fit-content;
+  margin: 0 auto;
 }
-footer{
-width: 250px;
-margin:0 auto;
+footer {
+  width: fit-content;
+  margin: 0 auto;
 }
-
-
-
 
 .blogpost-container {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 
-    display:flex;
-    flex-wrap: wrap;
-    width: 100%;
-    justify-content:flex-end;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: flex-end;
 }
 
-.blogpost {
-    flex: 1 0 2em;
-
-    border: 1px solid black;
-    font-size: 1em; 
-    text-align:center;
-    padding:1em;   
-
+.blogpost-container > * {
+  flex: 1 0 2em;
+  border: 1px solid black;
+  font-size: 1em;
+  text-align: center;
+  padding: 1em;
 }
 
-.blogpost.wide {
-    background-color: red;
-    flex: 2 0 2em;
+.blogpost-container > *.self.wide {
+  background-color: green;
 }
 
-.blogpost.self {
-    background-color: purple;
-    align-self: flex-start;
-    order:-1;
+/*
+.blogpost-container > *.self {
+  background-color: purple;
+  align-self: flex-start;
+  order: -1;
+}*/
+
+.blogpost-container > *.wide {
+  background-color: red;
+  flex: 2 0 2em;
 }
 
-.blogpost img {
-    max-width: 100%;
+.blogpost-container img {
+  max-width: 100%;
 }
